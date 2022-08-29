@@ -18,6 +18,9 @@
 # Design files
 design/
 
+# Node modules
+node_modules/
+
 # README Template
 README-template.md
 
