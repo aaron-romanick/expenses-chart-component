@@ -1,0 +1,93 @@
+:root {
+
+  /* Font Sizes */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-base: 1rem; /* 16px */
+  --fs-lg: 1.125rem; /* 18px */
+  --fs-xl: 1.25rem; /* 20px */
+  --fs-2xl: 1.5rem; /* 24px */
+  --fs-3xl: 1.875rem; /* 30px */
+  --fs-4xl: 2.25rem; /* 36px */
+  --fs-5xl: 3rem; /* 48px */
+  --fs-6xl: 3.75rem; /* 60px */
+  --fs-7xl: 4.5rem; /* 72px */
+  --fs-8xl: 6rem; /* 96px */
+  --fs-9xl: 8rem; /* 128px */
+
+  /* Default Body Text Font Size */
+  --fs-body: clamp(var(--fs-base), 4.1vw, var(--fs-lg));
+
+  /* Sizes */
+  --size-px: 1px;
+  --size-5: 0.125rem; /* 2px */
+  --size-10: 0.25rem; /* 4px */
+  --size-15: 0.375rem; /* 6px */
+  --size-20: 0.5rem; /* 8px */
+  --size-25: 0.625rem; /* 10px */
+  --size-30: 0.75rem; /* 12px */
+  --size-35: 0.875rem; /* 14px */
+  --size-40: 1rem; /* 16px */
+  --size-50: 1.25rem; /* 20px */
+  --size-60: 1.5rem; /* 24px */
+  --size-70: 1.75rem; /* 28px */
+  --size-80: 2rem; /* 32px */
+  --size-90: 2.25rem; /* 36px */
+  --size-100: 2.5rem; /* 40px */
+  --size-110: 2.75rem; /* 44px */
+  --size-120: 3rem; /* 48px */
+  --size-140: 3.5rem; /* 56px */
+  --size-160: 4rem; /* 64px */
+  --size-200: 5rem; /* 80px */
+  --size-240: 6rem; /* 96px */
+  --size-280: 7rem; /* 112px */
+  --size-320: 8rem; /* 128px */
+  --size-360: 9rem; /* 144px */
+  --size-400: 10rem; /* 160px */
+  --size-440: 11rem; /* 176px */
+  --size-480: 12rem; /* 192px */
+  --size-520: 13rem; /* 208px */
+  --size-560: 14rem; /* 224px */
+  --size-600: 15rem; /* 240px */
+  --size-640: 16rem; /* 256px */
+  --size-720: 18rem; /* 288px */
+  --size-800: 20rem; /* 320px */
+  --size-960: 24rem; /* 384px */
+  --size-max: 100vmax;
+  
+  /* Colors */
+  --clr-primary: hsl(10, 79%, 65%);
+  --clr-accent: hsl(186, 34%, 60%);
+  --clr-neutral-100: hsl(25, 47%, 15%);
+  --clr-neutral-200: hsl(28, 10%, 53%);
+  --clr-neutral-300: hsl(27, 66%, 92%);
+  --clr-neutral-400: hsl(33, 100%, 98%);
+
+  /* Font Families */
+  --ff-primary: "DM Sans", sans-serif;
+  --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Transition/Animation Speeds */
+  --speed-faster: 400ms;
+  --speed-fastest: 200ms;
+
+  /* Default Color Scheme */
+  --lm-body-bg: var(--clr-neutral-300);
+  --lm-body-text: var(--clr-neutral-200);
+  --lm-section-balance-bg: var(--clr-primary);
+  --lm-section-balance-text: var(--clr-neutral-400);
+  --lm-section-balance-bg: var(--clr-primary);
+  --lm-section-spending-bg: var(--clr-neutral-400);
+  --lm-section-spending-text-emphasis: var(--clr-neutral-100);
+  --lm-section-spending-bar: var(--clr-primary);
+  --lm-section-spending-bar-emphasis: var(--clr-accent);
+  --lm-section-spending-bar-bg-hover: var(--clr-neutral-400);
+  --lm-section-spending-divider: var(--clr-neutral-300);
+  --lm-section-spending-total-bg: var(--clr-neutral-100);
+  --lm-section-spending-total-text: var(--clr-neutral-400);
+}

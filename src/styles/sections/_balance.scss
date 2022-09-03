@@ -1,0 +1,23 @@
+.balance {
+  --padding-block: clamp(var(--size-50), 6vw, var(--size-60));
+  --padding-inline: clamp(var(--size-30), 6vw, var(--size-70));
+
+  background-color: var(--lm-section-balance-bg);
+  background-image: url(/images/logo.svg);
+  background-position: center right clamp(var(--size-50), 6vw, var(--size-100));
+  background-repeat: no-repeat;
+  color: var(--lm-section-balance-text);
+
+  &__group {
+    --flow-space: var(--size-10);
+  }
+
+  &__total {
+    color: var(--fs-3xl);
+    font-size: clamp(var(--fs-2xl), 6vw, var(--fs-3xl));
+  }
+}
+
+a {
+  display: block;
+}

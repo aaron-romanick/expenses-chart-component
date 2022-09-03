@@ -1,0 +1,205 @@
+@use '/src/styles/abstracts/mixins/media-queries' as media-queries;
+@use '/src/styles/abstracts/mixins/prefix' as prefix;
+
+.spending {
+  --flow-space: var(--size-70);
+  --padding-block: clamp(var(--size-60), 6vw, var(--size-80));
+  --padding-inline: clamp(var(--size-50), 6vw, var(--size-100));
+
+  background-color: var(--lm-section-spending-bg);
+
+  &__heading {
+    color: var(--lm-section-spending-text-emphasis);
+    font-size: clamp(var(--fs-2xl), 6.1vw, var(--fs-3xl));
+    margin-block-end: var(--size-160);
+  }
+
+  &__graph {
+    align-items: end;
+    display: grid;
+    font-size: clamp(var(--fs-xs), 3.15vw, var(--fs-base));
+    gap: var(--size-10) clamp(var(--size-30), 3.4vw, var(--size-50));
+    height: var(--size-440);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 6fr 1fr;
+    justify-items: center;
+    position: relative;
+  }
+
+  &__bar {
+    animation-timing-function: linear;
+    background-color: var(--lm-section-spending-bar);
+    border-radius: var(--size-10);
+    position: relative;
+    transform-origin: bottom;
+    height: 100%;
+    width: 100%;
+
+    &::after {
+      background-color: var(--lm-section-spending-bar-bg-hover);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity var(--speed-fastest);
+      width: 100%;
+    }
+
+    &:not([data-state="is-entering"]) {
+      &:hover {
+        cursor: pointer;
+        animation-name: bar-bounce;
+        animation-duration: var(--speed-fastest);
+
+        &::after {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &[data-type="today"] {
+      background-color: var(--lm-section-spending-bar-emphasis);
+    }
+
+    &[data-state="is-entering"] {
+      animation-name: bar-grow;
+      animation-duration: var(--speed-faster);
+    }
+  }
+
+  &__daily {
+    background-color: var(--lm-section-spending-total-bg);
+    border-radius: var(--size-10);
+    color: var(--lm-section-spending-total-text);
+    top: -3rem;
+    font-weight: var(--fw-bold);
+    left: 50%;
+    padding: clamp(var(--size-10), 1.2vw, var(--size-20));
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, 0.4rem);
+    transition: opacity var(--speed-fastest),
+                transform var(--speed-fastest);
+
+    @include media-queries.size(tablet-landscape) { 
+      transform: translate(-50%, -0.5rem);
+    }
+
+    @at-root .spending__bar:not([data-state="is-entering"]):hover & {
+      opacity: 1;
+      transform: translate(-50%, 0.9rem);
+
+      @include media-queries.size(tablet-landscape) { 
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  &__divider {
+    background-color: var(--lm-section-spending-divider);
+    border: 0;
+    height: var(--size-5);
+  }
+
+  &__group {
+    display: grid;
+    grid-template-areas: "spending-label spending-comparison"
+                         "spending-total spending-comparison";
+  }
+
+  &__label {
+    grid-area: spending-label;
+  }
+
+  &__total {
+    color: var(--lm-section-spending-text-emphasis);
+    font-size: clamp(var(--fs-3xl), 7.5vw, var(--fs-5xl));
+    grid-area: spending-total;
+    line-height: 1.1;
+  }
+
+  &__comparison {
+    grid-area: spending-comparison;
+    align-self: end;
+    text-align: right;
+  }
+
+  &__percent {
+    color: var(--lm-section-spending-text-emphasis);
+  }
+}
+
+@include prefix.keyframes-with-webkit(bar-grow) {
+  from {
+    @include prefix.properties((
+      transform: scale(1.05, 0)
+    ), webkit);
+  }
+
+  60% {
+    @include prefix.properties((
+      transform: scale(0.95, 1.05)
+    ), webkit);
+  }
+
+  70% {
+    @include prefix.properties((
+      transform: scale(1.1, 0.9)
+    ), webkit);
+  }
+
+  80% {
+    @include prefix.properties((
+    transform: scale(0.97, 1.03)
+    ), webkit);
+  }
+
+  90% {
+    @include prefix.properties((
+    transform: scale(1.03, 0.97)
+    ), webkit);
+  }
+
+  to {
+    @include prefix.properties((
+      transform: scale(1, 1)
+    ), webkit);
+  }
+}
+
+@include prefix.keyframes-with-webkit(bar-bounce) {
+  from {
+    @include prefix.properties((
+      transform: scale(1, 1)
+    ), webkit);
+  }
+
+  25% {
+    @include prefix.properties((
+      transform: scale(1.1, 0.9)
+    ), webkit);
+  }
+
+  50% {
+    @include prefix.properties((
+      transform: scale(0.97, 1.03)
+    ), webkit);
+  }
+
+  75% {
+    @include prefix.properties((
+      transform: scale(1.03, 0.97)
+    ), webkit);
+  }
+
+  to {
+    @include prefix.properties((
+      transform: scale(1, 1)
+    ), webkit);
+  }
+}

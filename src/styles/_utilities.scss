@@ -1,0 +1,33 @@
+:where(.flow) {
+  > * + * {
+    margin-block-start: var(--flow-space, var(--size-40));
+  }
+}
+
+.container {
+  &-wrapper {
+    --max-width: 35rem;
+    --wrapper-padding: var(--size-40);
+  
+    margin-inline: auto;
+    width: min(100% - var(--wrapper-padding) * 2, var(--max-width));
+  }
+
+  &-padding {
+    padding: var(--padding-block) var(--padding-inline);
+  }
+
+  &-rounded-corners {
+    border-radius: clamp(var(--size-10), 4vw, var(--size-60));
+  }
+}
+
+.display {
+  &-block {
+    display: block;
+  }
+}
+
+.text-bold {
+  font-weight: var(--fw-bold);
+}

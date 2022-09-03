@@ -1,0 +1,15 @@
+@use "sass:list";
+
+$-largest: 1;
+$-smallest: 6;
+
+@mixin h-tags($largest: $-largest, $smallest: $-smallest) {
+  $selector: '';
+  @for $i from $largest through $smallest {
+    $selector: $selector + h#{$i};
+    @if($i != $smallest) {
+      $selector: $selector + ", ";
+    }
+  }
+  #{$selector} { @content; }
+}

@@ -1,0 +1,10 @@
+.page {
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(var(--size-40), 4vw, var(--size-60));
+    justify-content: center;
+    padding-block: var(--size-60);
+    min-height: 100vh;
+  }
+}
