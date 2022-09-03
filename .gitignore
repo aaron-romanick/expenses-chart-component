@@ -29,3 +29,6 @@ style-guide.md
 
 # Deploy Bash Script
 deploy.sh
+
+# Build Files
+dist/
