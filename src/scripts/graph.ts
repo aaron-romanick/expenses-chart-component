@@ -8,7 +8,7 @@ const fetchData = async (url: string): Promise<DailySpending[]> => {
 
 // Makes elements based on server data and places them in the DOM
 export const renderGraph = async () => {
-  const data = await fetchData('/data.json')
+  const data = await fetchData('/data/data.json')
 
   const barEls: HTMLElement[] = []
   const weekdayEls: HTMLElement[] = []
