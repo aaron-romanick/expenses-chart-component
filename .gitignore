@@ -26,3 +26,6 @@ README-template.md
 
 # Style Guide
 style-guide.md
+
+# Deploy Bash Script
+deploy.sh
