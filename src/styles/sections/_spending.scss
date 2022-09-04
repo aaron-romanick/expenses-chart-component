@@ -27,7 +27,9 @@
   }
 
   &__bar {
-    animation-timing-function: linear;
+    @include prefix.properties((
+      animation-timing-function: linear,
+    ), webkit);
     background-color: var(--lm-section-spending-bar);
     border-radius: var(--size-10);
     position: relative;
@@ -50,9 +52,11 @@
 
     &:not([data-state="is-entering"]) {
       &:hover {
+        @include prefix.properties((
+          animation-name: bar-bounce,
+          animation-duration: var(--speed-fastest),
+        ), webkit);
         cursor: pointer;
-        animation-name: bar-bounce;
-        animation-duration: var(--speed-fastest);
 
         &::after {
           opacity: 0.5;
@@ -65,8 +69,10 @@
     }
 
     &[data-state="is-entering"] {
-      animation-name: bar-grow;
-      animation-duration: var(--speed-faster);
+      @include prefix.properties((
+        animation-name: bar-grow,
+        animation-duration: var(--speed-faster),
+      ), webkit);
     }
   }
 
