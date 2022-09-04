@@ -20,6 +20,12 @@ const COUNT_UPABLES: CountUpable[] = [
   },
 ]
 
+export const displayFinalAmounts = () => {
+  COUNT_UPABLES.forEach(countUpable => {
+    countUpable.element.innerText = countUpable.amount.toString()
+  })
+}
+
 // Counts up each CountUpable within DURATION until it reaches
 // each respective CountUpables 'amount' value
 export const countUp = (time: DOMHighResTimeStamp) => {
@@ -38,8 +44,6 @@ export const countUp = (time: DOMHighResTimeStamp) => {
     prevTime = time
     requestAnimationFrame(countUp)
   } else {
-    COUNT_UPABLES.forEach(countUpable => {
-      countUpable.element.innerText = countUpable.amount.toString()
-    })
+    displayFinalAmounts()
   }
 }
