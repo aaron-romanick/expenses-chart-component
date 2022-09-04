@@ -86,7 +86,7 @@
     transition: opacity var(--speed-fastest),
                 transform var(--speed-fastest);
 
-    @include media-queries.size(tablet-landscape) { 
+    @include media-queries.size(tablet-portrait) { 
       transform: translate(-50%, -0.5rem);
     }
 
@@ -94,7 +94,7 @@
       opacity: 1;
       transform: translate(-50%, 0.9rem);
 
-      @include media-queries.size(tablet-landscape) { 
+      @include media-queries.size(tablet-portrait) { 
         transform: translate(-50%, 0);
       }
     }
