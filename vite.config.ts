@@ -8,7 +8,7 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			output: {
-				assetFileNames: 'styles.css',
+				assetFileNames: 'style.css',
 				entryFileNames: 'main.js',
 			},
 		},
