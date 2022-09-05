@@ -23,6 +23,7 @@ a {
   color: currentColor;
 }
 
-:focus {
-  outline: var(--size-50) dotted;
+:focus,
+:focus-visible {
+  outline: var(--size-10) dotted;
 }
