@@ -14,9 +14,9 @@ This is a solution to the [Expenses Chart Component Challenge on Frontend Mentor
   - [Continued development](#continued-development)
 - [Author](#author)
 
-## <a name="overview"></a>## Overview
+## <a name="overview"></a>Overview
 
-### <a name="the-challenge"></a>### The Challenge
+### <a name="the-challenge"></a>The Challenge
 
 Users should be able to:
 
@@ -26,11 +26,11 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
 
-### Screenshot
+### <a name="screenshot"></a>Screenshot
 
 ![Interactive Comments Section Solution](./screenshot.png)
 
-### Links
+### <a name="links"></a>Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/expenses-chart-component-solution-using-typescript-and-css-grid-VslA4kNq-Q](https://www.frontendmentor.io/solutions/expenses-chart-component-solution-using-typescript-and-css-grid-VslA4kNq-Q)
 - Live Site URL: [https://aaron-romanick.github.io/expenses-chart-component/](https://aaron-romanick.github.io/expenses-chart-component/)
@@ -53,7 +53,7 @@ For this challenge, I decided that I didn't want to pick up any new tools, but s
 
 The challenge didn't call for any animation, but since the basic design wasn't too difficult I decided to add intro animations both to the bar graphs as well as the various numbers displayed. I also made sure to respect users who prefer reduced motion by respecting the `prefers-reduced-motion` setting in the browser. The data is pulled into the page from a JSON file using the browser's native `fetch` functionality.
 
-### Continued Development
+### <a name="continued-development"></a>Continued Development
 
 I'd like to continue working on my TypeScript skills as well as mastering the grid layout in CSS.
 
