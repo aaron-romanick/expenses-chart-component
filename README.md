@@ -5,13 +5,13 @@ This is a solution to the [Expenses Chart Component Challenge on Frontend Mentor
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+- [My Process](#my-process)
+  - [Built With](#built-with)
+  - [What I Learned](#what-i-learned)
+  - [Continued Development](#continued-development)
 - [Author](#author)
 
 ## <a name="overview"></a>Overview
@@ -28,7 +28,7 @@ Users should be able to:
 
 ### <a name="screenshot"></a>Screenshot
 
-![Interactive Comments Section Solution](./screenshot.png)
+![Expenses Chart Component Challenge Solution](./screenshot.png)
 
 ### <a name="links"></a>Links
 
