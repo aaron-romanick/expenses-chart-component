@@ -142,70 +142,48 @@
 
 @include prefix.keyframes-with-webkit(bar-grow) {
   from {
-    @include prefix.properties((
-      transform: scale(1.05, 0)
-    ), webkit);
+    transform: scale(1.05, 0);
   }
 
   60% {
-    @include prefix.properties((
-      transform: scale(0.95, 1.05)
-    ), webkit);
+    transform: scale(0.95, 1.05);
   }
 
   70% {
-    @include prefix.properties((
-      transform: scale(1.1, 0.9)
-    ), webkit);
+    transform: scale(1.1, 0.9);
   }
 
   80% {
-    @include prefix.properties((
-    transform: scale(0.97, 1.03)
-    ), webkit);
+    transform: scale(0.97, 1.03);
   }
 
   90% {
-    @include prefix.properties((
-    transform: scale(1.03, 0.97)
-    ), webkit);
+    transform: scale(1.03, 0.97);
   }
 
   to {
-    @include prefix.properties((
-      transform: scale(1, 1)
-    ), webkit);
+    transform: scale(1, 1);
   }
 }
 
 @include prefix.keyframes-with-webkit(bar-bounce) {
   from {
-    @include prefix.properties((
-      transform: scale(1, 1)
-    ), webkit);
+    transform: scale(1, 1);
   }
 
   25% {
-    @include prefix.properties((
-      transform: scale(1.1, 0.9)
-    ), webkit);
+    transform: scale(1.1, 0.9);
   }
 
   50% {
-    @include prefix.properties((
-      transform: scale(0.97, 1.03)
-    ), webkit);
+    transform: scale(0.97, 1.03);
   }
 
   75% {
-    @include prefix.properties((
-      transform: scale(1.03, 0.97)
-    ), webkit);
+    transform: scale(1.03, 0.97);
   }
 
   to {
-    @include prefix.properties((
-      transform: scale(1, 1)
-    ), webkit);
+    transform: scale(1, 1);
   }
 }
