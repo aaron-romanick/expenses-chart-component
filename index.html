@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="512x192" href="https://www.aaronromanick.com/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.aaronromanick.com/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.aaronromanick.com/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.aaronromanick.com/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.aaronromanick.com/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://www.aaronromanick.com/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#223344">
+    <meta name="theme-color" content="#223344">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Chart Component</title>
+    <script type="module" crossorigin src="/expenses-chart-component/main.js"></script>
+    <link rel="stylesheet" href="/expenses-chart-component/style.css">
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header>
+        <div class="balance | container-wrapper container-padding container-rounded-corners">
+          <div class="balance__group | flow">
+            <p class="balance__label">My balance</p>
+            <p class="balance__total | text-bold">
+              $<span>0.00</span>
+            </p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="spending | flow container-wrapper container-padding container-rounded-corners">
+          <header>
+            <h1 class="spending__heading | text-bold">Spending - Last 7 days</h1>
+          </header>
+          <div class="spending__graph"></div>
+          <hr class="spending__divider">
+          <div class="spending__group">
+            <p class="spending__label">Total this month</p>
+            <p class="spending__total | text-bold">
+              $<span>0.00</span>
+            </p>
+            <p class="spending__comparison">
+              <span class="spending__percent | display-block text-bold">
+                &plus;<span>0</span>&percnt;
+              </span>
+              <span class="display-block">from last month</span>
+            </p>
+          </div>
+        </div>
+      </main>
+      </div>
+    
+  </body>
+</html>
